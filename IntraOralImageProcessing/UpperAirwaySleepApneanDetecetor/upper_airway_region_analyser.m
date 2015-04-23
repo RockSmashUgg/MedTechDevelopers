@@ -40,7 +40,11 @@ figure(4); imshow(upper_airway)
 %figure(5); imshow(test_edge)
 
 %% Threshold Segmentation
-upper_airway = upper_airway < 85
+bw = upper_airway < 85
 figure(5); imshow(upper_airway)
 
-%% 
+%% Analyse the data
+stats = regionprops('table',bw,'Centroid',...
+    'MajorAxisLength','MinorAxisLength',...
+    'Area','BoundingBox','Eccentricity','EquivDiameter',...
+    'Extent','FilledArea', 'Orientation', 'Perimeter', 'Solidity')
