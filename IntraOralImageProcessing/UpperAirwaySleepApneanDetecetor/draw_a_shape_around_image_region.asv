@@ -9,7 +9,7 @@ shapeInserter = vision.ShapeInserter;
 I = imread('C:\Users\Dijemni\Documents\GitHub\MedTechDevelopers\IntraOralImageProcessing\UpperAirwaySleepApneanDetecetor\Test_Image.jpg');
 
 %% Define the rectangle dimensions as [x y width height]
-rectangle = int32([230 105 251 140]); %The point the the top left corner of the rectangle
+rectangle = int32([230 97 251 155]); %The point the the top left corner of the rectangle
 
 %% Draw the rectangle and display the result
 J = step(shapeInserter, I, rectangle);

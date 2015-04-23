@@ -36,11 +36,4 @@ upper_airway(105:245,230:481)= test_image(105:245,230:481); %,105:245
 figure(4); imshow(upper_airway)
 
 %% Test edge detection
-%test_edge = edge(upper_airway,'canny');
-%figure(5); imshow(test_edge)
-
-%% Threshold Segmentation
-upper_airway = upper_airway < 85
-figure(5); imshow(upper_airway)
-
-%% 
+test_edge = edge(upper_airway,'sb
